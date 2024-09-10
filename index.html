@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Abrar | Web Developer</title>
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "tSa9U3xVQOKKs_8Ro",
+        });
+      })();
+    </script>
+
+    <script src="script.js" defer></script>
+  </head>
+  <body onclick="playSoundOnClick(event)">
+    <audio id="backgroundMusic" autoplay loop>
+      <source src="sfx/background_reduced.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+    <div class="playButton mobile_hidden" onclick="toggleSound()">
+      <div class="moving_icons icons_default">
+        <i class="fa-solid fa-volume-high"></i
+        ><i class="fa-solid fa-volume-xmark"></i>
+      </div>
+    </div>
+    <!-- <div id="blob" class="mobile_hidden"></div> -->
+
+    <div class="loader"></div>
+    <!-- Navbar Starts -->
+    <div class="fixed_header_container container">
+      <header>
+        <div class="menu_background">
+          <div class="header_container">
+            <div class="playButton_mobile mobile_only" onclick="toggleSound()">
+              <div class="moving_icons_mobile icons_default">
+                <i class="fa-solid fa-volume-high"></i
+                ><i class="fa-solid fa-volume-xmark"></i>
+              </div>
+            </div>
+            <div class="menu_items">
+              <div class="logo">
+                <img src="images/logo.png" alt="" draggable="false" />
+              </div>
+              <div class="menu_links">
+                <nav>
+                  <a
+                    href="#home"
+                    onmouseover="playSoundOnClick1(event)"
+                    class="nav-link active"
+                    >Home</a
+                  >
+                  <a
+                    href="#about"
+                    onmouseover="playSoundOnClick1(event)"
+                    class="nav-link"
+                    >About</a
+                  >
+                  <a
+                    href="#skills"
+                    onmouseover="playSoundOnClick1(event)"
+                    class="nav-link"
+                    >Skills</a
+                  >
+                  <a
+                    href="#projects"
+                    onmouseover="playSoundOnClick1(event)"
+                    class="nav-link"
+                    >Projects</a
+                  >
+                  <a
+                    href="#contact"
+                    onmouseover="playSoundOnClick1(event)"
+                    class="nav-link"
+                    >Contact</a
+                  >
+                </nav>
+              </div>
+              <div class="toggle_btn">
+                <i class="fa-solid fa-bars"></i>
+              </div>
+              <div class="dropdown_menu">
+                <nav>
+                  <a
+                    href="#home"
+                    onmouseover="playSoundOnClick1(event)"
+                    class="nav-link_1"
+                    >Home</a
+                  >
+                  <a
+                    href="#about"
+                    onmouseover="playSoundOnClick1(event)"
+                    class="nav-link_1"
+                    >About</a
+                  >
+                  <a
+                    href="#skills"
+                    onmouseover="playSoundOnClick1(event)"
+                    class="nav-link_1"
+                    >Skills</a
+                  >
+                  <a
+                    href="#projects"
+                    onmouseover="playSoundOnClick1(event)"
+                    class="nav-link_1"
+                    >Projects</a
+                  >
+                  <a
+                    href="#contact"
+                    onmouseover="playSoundOnClick1(event)"
+                    class="nav-link_1"
+                    >Contact</a
+                  >
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+    </div>
+    <!-- Navbar Ends -->
+    <!-- Hero Section Starts -->
+    <section id="home" class="hero_section">
+      <header
+        style="
+          visibility: hidden;
+          position: relative;
+          transform: translate(-50%, 0);
+          left: 50%;
+          z-index: 1;
+          padding-top: 40px;
+        "
+      >
+        <div class="menu_background"></div>
+      </header>
+      <div class="hero_contents">
+        <div class="container hero_top_contents">
+          <div class="hero_left">
+            <h1>
+              Hi, my<br />
+              name is <span id="h1_color_changer">Abrar</span>.
+            </h1>
+            <p>I love developing elegant websites.</p>
+            <a
+              class="interactable"
+              href="#about"
+              onmouseover="playSoundOnClick1(event)"
+              >Know more</a
+            >
+            <a href="#about" id="mobile_know_more">Know more</a>
+          </div>
+          <div class="hero_right">
+            <!-- <script
+              type="module"
+              src="https://unpkg.com/@splinetool/viewer@1.0.47/build/spline-viewer.js"
+            ></script>
+            <spline-viewer
+              class="mobile_hidden"
+              loading="eager"
+              hint
+              loading-anim-type="spinner-big-light"
+              url="https://prod.spline.design/tgE8WjaCh7BeTJlV/scene.splinecode"
+            ></spline-viewer> -->
+
+            <video
+              playsinline
+              autoplay
+              muted
+              loop
+              src="videos/hero_optimized.mp4"
+            ></video>
+          </div>
+        </div>
+        <div class="container scroll_down">
+          <img src="images/Scroll down 2.gif" alt="Scroll Down" />
+        </div>
+      </div>
+    </section>
+    <!-- Hero Section Ends -->
+    <!-- About Section Starts -->
+    <section id="about">
+      <header
+        style="
+          visibility: hidden;
+          position: relative;
+          transform: translate(-50%, 0);
+          left: 50%;
+          z-index: 1;
+          padding-top: 40px;
+        "
+      >
+        <div class="menu_background"></div>
+      </header>
+      <div class="about_contents">
+        <div class="container about_flex_box">
+          <div class="about_left">
+            <div class="about_left_box box">
+              <div class="box_contents">
+                <script
+                  type="module"
+                  src="https://unpkg.com/@splinetool/viewer@1.0.51/build/spline-viewer.js"
+                ></script>
+
+                <spline-viewer
+                  class="mobile_hidden content-placeholder"
+                  loading="eager"
+                  hint
+                  loading-anim-type="spinner-big-light"
+                  url="https://prod.spline.design/ga7hlborw8a6ebC7/scene.splinecode"
+                ></spline-viewer>
+
+                <video
+                  class="mobile_only"
+                  playsinline
+                  autoplay
+                  muted
+                  loop
+                  src="videos/about.mp4"
+                ></video>
+              </div>
+            </div>
+          </div>
+          <div class="about_right">
+            <h2 class="sub_heading">About Me</h2>
+            <h3 class="secondary_sub_heading">
+              Skilled web developer with a strong skill set in creating visually
+              stunning websites.
+            </h3>
+            <p class="description">
+              With more than 3 years of experience in web development, I've had
+              the opportunity to refine my skills in HTML, CSS, Figma, Wordpress
+              etc. I'm passionate about creating top-notch websites that not
+              only look fantastic but also offer an outstanding user experience.
+              My objective is to bring my clients' ideas into reality and help
+              them in reaching their online goals.
+            </p>
+            <div class="about_right_boxes">
+              <div class="about_right_box box">
+                <div class="box_contents" style="flex-direction: column">
+                  <div
+                    class="counter"
+                    id="counter1"
+                    onmouseover="playSoundOnClick1(event)"
+                  >
+                    3
+                  </div>
+                  <p class="counter_description">Years of<br />Experience</p>
+                </div>
+              </div>
+              <div class="about_right_box box">
+                <div class="box_contents" style="flex-direction: column">
+                  <div
+                    class="counter"
+                    id="counter2"
+                    onmouseover="playSoundOnClick1(event)"
+                  >
+                    50
+                  </div>
+                  <p class="counter_description">Projects<br />Completed</p>
+                </div>
+              </div>
+              <div class="about_right_box box">
+                <div class="box_contents" style="flex-direction: column">
+                  <div
+                    class="counter"
+                    id="counter3"
+                    onmouseover="playSoundOnClick1(event)"
+                  >
+                    20
+                  </div>
+                  <p class="counter_description">Satisfied<br />Clients</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- About Section Ends -->
+    <!-- Skills Section Starts -->
+    <section id="skills">
+      <header
+        style="
+          visibility: hidden;
+          position: relative;
+          transform: translate(-50%, 0);
+          left: 50%;
+          z-index: 1;
+          padding-top: 40px;
+        "
+      >
+        <div class="menu_background"></div>
+      </header>
+      <div class="skills_contents">
+        <div class="container skills_flex_box">
+          <div class="skills_left">
+            <div class="skills_left_container">
+              <h2 class="sub_heading">My Skills</h2>
+              <div class="skills_left_skills">
+                <div class="skills">
+                  <div class="skills_headings">
+                    <p class="counter_description">HTML</p>
+                    <p class="counter_description">95%</p>
+                  </div>
+                  <div class="skills_loading_container">
+                    <div class="loading_width_1">
+                      <div class="skills_loading"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="skills">
+                  <div class="skills_headings">
+                    <p class="counter_description">CSS</p>
+                    <p class="counter_description">90%</p>
+                  </div>
+                  <div class="skills_loading_container">
+                    <div class="loading_width_2">
+                      <div class="skills_loading"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="skills">
+                  <div class="skills_headings">
+                    <p class="counter_description">Wordpress</p>
+                    <p class="counter_description">85%</p>
+                  </div>
+                  <div class="skills_loading_container">
+                    <div class="loading_width_3">
+                      <div class="skills_loading"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="skills">
+                  <div class="skills_headings">
+                    <p class="counter_description">UI Design</p>
+                    <p class="counter_description">65%</p>
+                  </div>
+                  <div class="skills_loading_container">
+                    <div class="loading_width_4">
+                      <div class="skills_loading"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="skills_right">
+            <script
+              type="module"
+              src="https://unpkg.com/@splinetool/viewer@1.0.51/build/spline-viewer.js"
+            ></script>
+            <spline-viewer
+              class="mobile_hidden"
+              loading="eager"
+              hint
+              loading-anim-type="spinner-big-light"
+              url="https://prod.spline.design/UtFeJyaz9BzJSVOR/scene.splinecode"
+            ></spline-viewer>
+
+            <video
+              class="mobile_only"
+              playsinline
+              autoplay
+              muted
+              loop
+              src="videos/Optimized(better quality).mp4"
+            ></video>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Skills Section Ends -->
+    <!-- Project Section Starts -->
+    <section id="projects">
+      <header
+        style="
+          visibility: hidden;
+          position: relative;
+          transform: translate(-50%, 0);
+          left: 50%;
+          z-index: 1;
+          padding-top: 40px;
+        "
+      >
+        <div class="menu_background"></div>
+      </header>
+      <div class="projects_contents">
+        <div class="container">
+          <h2 class="sub_heading" style="text-align: center">
+            Latest Projects
+          </h2>
+          <div class="projects_flex_box carousel">
+            <div class="project">
+              <div class="box_contents">
+                <div class="box">
+                  <img
+                    src="images/projects/2.0.png"
+                    alt="img"
+                    draggable="false"
+                    class="project_two_img"
+                  />
+                </div>
+                <h3 class="project_title">Portfolio 2024</h3>
+                <div class="project_description">
+                  My Portfolio website that you are looking at right now.
+                </div>
+                <a href="#projects" onmouseover="playSoundOnClick1(event)"
+                  >Live Preview</a
+                >
+              </div>
+            </div>
+            <div class="project">
+              <div class="box_contents">
+                <div class="box">
+                  <img
+                    src="images/projects/1.0.png"
+                    alt="img"
+                    draggable="false"
+                  />
+                </div>
+                <h3 class="project_title">Wellstarrmedia</h3>
+                <div class="project_description">
+                  Creative media solutions for dynamic brand storytelling and
+                  engagement.
+                </div>
+                <a
+                  href="https://wellstarrmedia.com/"
+                  onmouseover="playSoundOnClick1(event)"
+                  >Live Preview</a
+                >
+              </div>
+            </div>
+            <div class="project">
+              <div class="box_contents">
+                <div class="box">
+                  <img
+                    src="images/projects/3.png"
+                    alt="img"
+                    draggable="false"
+                  />
+                </div>
+                <h3 class="project_title">Two Pet Finders</h3>
+                <div class="project_description">
+                  Tips, care advice, and stories for beloved pets and owners.
+                </div>
+                <a
+                  href="https://twopetfinders.com/"
+                  onmouseover="playSoundOnClick1(event)"
+                  >Live Preview</a
+                >
+              </div>
+            </div>
+            <div class="project">
+              <div class="box_contents">
+                <div class="box">
+                  <img
+                    src="images/projects/4.png"
+                    alt="img"
+                    draggable="false"
+                  />
+                </div>
+                <h3 class="project_title">Kitchen Bargains</h3>
+                <div class="project_description">
+                  Premium kitchen designs and solutions for your culinary needs.
+                </div>
+                <a
+                  href="https://kitchenbargains.com.au/"
+                  onmouseover="playSoundOnClick1(event)"
+                  >Live Preview</a
+                >
+              </div>
+            </div>
+            <div class="project">
+              <div class="box_contents">
+                <div class="box">
+                  <img
+                    src="images/projects/5.png"
+                    alt="img"
+                    draggable="false"
+                  />
+                </div>
+                <h3 class="project_title">Seminiseed</h3>
+                <div class="project_description">
+                  Explore vegetable varieties, planting tips, and seed-saving
+                  techniques.
+                </div>
+                <a
+                  href="https://seminiseed.com/"
+                  onmouseover="playSoundOnClick1(event)"
+                  >Live Preview</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="projects_arrow_box">
+            <div id="left" class="left_arrow btnhidden">
+              <i
+                class="fa-solid fa-angle-left"
+                onmouseover="playSoundOnClick1(event)"
+              ></i>
+            </div>
+            <div id="right" class="right_arrow">
+              <i
+                class="fa-solid fa-angle-right"
+                onmouseover="playSoundOnClick1(event)"
+              ></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Project Section Ends -->
+    <!-- Contact Section Starts -->
+    <section id="contact">
+      <header
+        style="
+          visibility: hidden;
+          position: relative;
+          transform: translate(-50%, 0);
+          left: 50%;
+          z-index: 1;
+          padding-top: 40px;
+        "
+      >
+        <div class="menu_background"></div>
+      </header>
+      <div class="contact_contents">
+        <div class="container contact_flex_box">
+          <div class="contact_left">
+            <!-- <script
+              type="module"
+              src="https://unpkg.com/@splinetool/viewer@1.0.53/build/spline-viewer.js"
+            ></script>
+            <spline-viewer
+              class="mobile_hidden"
+              loading="eager"
+              loading-anim-type="spinner-big-light"
+              url="https://prod.spline.design/bSd0khdLoHC3nvOo/scene.splinecode"
+            ></spline-viewer> -->
+
+            <video
+              playsinline
+              autoplay
+              muted
+              loop
+              src="videos/contact.mp4"
+            ></video>
+          </div>
+          <div class="contact_right">
+            <div class="form_container">
+              <h2
+                class="contact_heading sub_heading"
+                style="text-align: center"
+              >
+                Contact Me
+              </h2>
+              <div class="form_box">
+                <form action="">
+                  <div class="input_box">
+                    <input
+                      class="project_description"
+                      type="text"
+                      name="name"
+                      placeholder="Name"
+                      id="form_name"
+                      required
+                    />
+                  </div>
+                  <div class="input_box">
+                    <input
+                      class="project_description"
+                      type="email"
+                      name="email"
+                      placeholder="Email"
+                      id="form_email"
+                      required
+                    />
+                  </div>
+                  <div class="textarea_box">
+                    <textarea
+                      class="project_description"
+                      type="message"
+                      name="message"
+                      placeholder="Message"
+                      id="form_message"
+                      required
+                    ></textarea>
+                  </div>
+                  <div class="socials_container">
+                    <div class="socials">
+                      <a href="#"
+                        ><i
+                          class="fa-brands fa-facebook-f"
+                          onmouseover="playSoundOnClick1(event)"
+                        ></i
+                      ></a>
+                      <a href="#"
+                        ><i
+                          class="fa-brands fa-instagram"
+                          onmouseover="playSoundOnClick1(event)"
+                        ></i
+                      ></a>
+                      <a href="#"
+                        ><i
+                          class="fa-brands fa-linkedin-in"
+                          onmouseover="playSoundOnClick1(event)"
+                        ></i
+                      ></a>
+                    </div>
+                    <div
+                      class="submit_box"
+                      onmouseover="playSoundOnClick1(event)"
+                    >
+                      <input
+                        class="form_submit"
+                        type="submit"
+                        value="Submit"
+                        onclick="sendMail()"
+                      />
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="copyright_contents">
+        <div class="container">
+          <div class="divider"></div>
+          <p class="project_description">
+            © 2024 Ajwad Abrar. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- Contact Section Ends -->
+  </body>
+</html>
