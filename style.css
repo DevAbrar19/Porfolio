@@ -1571,8 +1571,8 @@ input:focus {
 }
 @media (max-width: 1024px) {
   .contact_contents {
-    margin-top: 30px;
-  }
+  margin-top: 30px;
+}
   .contact_flex_box {
     flex-direction: column-reverse;
     justify-content: space-evenly;
